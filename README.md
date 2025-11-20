@@ -45,6 +45,13 @@ node server.js
 
 サーバーはポート `4000` で起動します。
 
+**設定の変更:**
+保持するデータの最大数を変更したい場合は、`server/server.js` 内の `maxDataData` 変数の値を変更してください。
+
+```javascript
+const maxDataData = 200; // 保持するデータ数を変更
+```
+
 ### 3. Client (フロントエンド)
 
 Next.jsアプリケーションを起動します。

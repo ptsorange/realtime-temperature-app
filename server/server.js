@@ -12,7 +12,7 @@ const io = socketIo(server, {
 });
 
 const temperatureData = [];
-const maxDataPoints = 200;
+const maxDataData = 200;
 
 app.use(express.json());
 
@@ -26,8 +26,8 @@ app.post("/sendData", (req, res) => {
         temperature: data.temperature,
         humidity: data.humidity
     });
-    if (temperatureData.length > maxDataPoints) {
-        temperatureData.splice(0, temperatureData.length - maxDataPoints);
+    if (temperatureData.length > maxDataData) {
+        temperatureData.splice(0, temperatureData.length - maxDataData);
     }
     res.status(200).send("Data received");
 });
